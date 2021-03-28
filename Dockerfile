@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.source="https://github.com/giovtorres/slurm-docke
       org.label-schema.docker.cmd="docker-compose up -d" \
       maintainer="Giovanni Torres"
 
-ARG SLURM_TAG=slurm-19-05-1-2
+ARG SLURM_TAG=slurm-20-11-5-1
 ARG GOSU_VERSION=1.11
 
 RUN set -ex \
@@ -26,6 +26,8 @@ RUN set -ex \
        munge-devel \
        python-devel \
        python-pip \
+       python3-devel \
+       python3-pip \
        python34 \
        python34-devel \
        python34-pip \
