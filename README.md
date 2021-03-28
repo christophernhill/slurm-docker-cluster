@@ -51,9 +51,8 @@ docker-compose up -d
 ```
 
 ## To fix /etc/slurm/slurm.conf
-# comment the line
-#
-# AccountingStorageLoc=slurm_acct_db e.g.
+#### comment the line
+#### AccountingStorageLoc=slurm_acct_db e.g.
 ```
 sed -i 's/^AccountingStorageLoc=/#AccountingStorageLoc=/' /etc/slurm/slurm.conf
 ```
