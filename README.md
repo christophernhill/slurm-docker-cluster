@@ -54,11 +54,15 @@ docker-compose up -d
 # comment the line
 #
 # AccountingStorageLoc=slurm_acct_db e.g.
+```
 sed -i 's/^AccountingStorageLoc=/#AccountingStorageLoc=/' /etc/slurm/slurm.conf
+```
 
 ## To fix /etc/slurm/slurmdbd.conf
+```
 chmod 600 /etc/slurm/slurmdbd.conf
 chown slurm:slurm /etc/slurm/slurmdbd.conf
+```
 
 ## Register the Cluster with SlurmDBD
 
