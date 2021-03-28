@@ -50,6 +50,16 @@ Run `docker-compose` to instantiate the cluster:
 docker-compose up -d
 ```
 
+## To fix /etc/slurm/slurm.conf
+# comment the line
+#
+# AccountingStorageLoc=slurm_acct_db e.g.
+sed -i 's/^AccountingStorageLoc=/#AccountingStorageLoc=/' /etc/slurm/slurm.conf
+
+## To fix /etc/slurm/slurmdbd.conf
+chmod 600 /etc/slurm/slurmdbd.conf
+chown slurm:slurm /etc/slurm/slurmdbd.conf
+
 ## Register the Cluster with SlurmDBD
 
 To register the cluster to the slurmdbd daemon, run the `register_cluster.sh`
